@@ -1,0 +1,23 @@
+# 插件名
+name: 调试
+# 插件id（全局唯一）
+id: dbg
+# 版本号
+version: 1.0.0
+# 描述
+description: This is debug plugin
+# 类型：service: 服务[0] | window: 窗体[1]
+type: 1
+# 菜单
+menu:
+    # 图标
+    icon: bug
+    icon_color: "#FF7F00"
+    # icon_size: 30
+    # 显示方式：switch: 切换[0] | popup: 弹出[1]
+    display_mode: 0
+    # 排序权重: 数值大的在顶部菜单右侧显示
+    sort_weight: 0
+
+dependents:
+    - net

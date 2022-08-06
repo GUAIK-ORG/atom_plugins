@@ -1,0 +1,12 @@
+# 插件名
+name: 标题栏控件
+# 插件id（全局唯一）
+id: titlebar
+# 版本号
+version: 1.0.0
+# 描述
+description: This is titlebar plugin
+# 类型：service: 服务[0]| window: 窗体[1]
+type: 1
+#依赖项
+dependents:

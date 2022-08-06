@@ -1,0 +1,12 @@
+#ifndef ATOMPLUGIN_GLOBAL_H
+#define ATOMPLUGIN_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(ATOMPLUGIN_LIBRARY)
+#  define ATOMPLUGIN_EXPORT Q_DECL_EXPORT
+#else
+#  define ATOMPLUGIN_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // ATOMPLUGIN_GLOBAL_H

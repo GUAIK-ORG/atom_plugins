@@ -1,0 +1,12 @@
+# 插件名
+name: 网络服务
+# 插件id（全局唯一）
+id: net
+# 版本号
+version: 1.0.0
+# 描述
+description: 提供TCP,UDP,MQ等服务
+# 类型：service: 服务[0]| window: 窗体[1]
+type: 0
+# 依赖项
+dependents:

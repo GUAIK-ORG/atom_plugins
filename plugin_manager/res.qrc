@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>style.qss</file>
+        <file>template/template.pro</file>
+        <file>template/atomplugin_global.h</file>
+        <file>template/widgets/mainwidget.cpp</file>
+        <file>template/widgets/mainwidget.h</file>
+        <file>template/atomplugin_service.cpp</file>
+        <file>template/atomplugin_window.cpp</file>
+        <file>template/atomplugin.h</file>
+        <file>template/widgets/mainwidget.ui</file>
+    </qresource>
+</RCC>
