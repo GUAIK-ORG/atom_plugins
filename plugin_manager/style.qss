@@ -72,3 +72,22 @@ QLineEdit {
 QLabel {
         color: #a9b7c6;
 }
+QComboBox {
+        color: #a9b7c6;
+        background: #1e1d23;
+}
+QComboBox:editable {
+        background: #1e1d23;
+        color: #a9b7c6;
+        selection-background-color: #1e1d23;
+}
+QComboBox QAbstractItemView {
+        color: #a9b7c6;
+        background: #1e1d23;
+        selection-color: #FFFFFF;
+        selection-background-color: #1e1d23;
+}
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+        color: #a9b7c6;
+        background: #1e1d23;
+}
