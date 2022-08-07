@@ -131,23 +131,35 @@ https://github.com/GUAIK-ORG/atom_plugins/releases/tag/v1.0.0
 
 ### 框架接口服务
 
+💎 一个重要的目录：**framework**
+
+**framework**目录下存放了所有框架对外提供的接口。要了解框架功能的话可以把该目录下的所有接口头文件看一遍。
+
+下面挑部分常用接口讲解
+
 #### 组件管理器
 
 > 提供了接口对象的注册与获取
 
 ```cpp
-/// 注册接口对象
-// [param] ctx 上下文对象指针
-// [param] interfaceObj 接口对象指针
-// [return] 成功：0 失败：-1
+/**
+ * @brief 注册接口对象（仅服务可用）
+ * 
+ * @param ctx 上下文对象
+ * @param interfaceObj 接口对象
+ * @return int 成功:0
+ */
 int registerInterfaceObj(IContext* ctx, void* interfaceObj);
 ```
 
 ```cpp
-/// 获取接口对象
-// [param] ctx 上下文对象指针
-// [param] id 组件id
-// [return] 成功：接口对象指针 失败：nullptr
+/**
+ * @brief 获取接口对象
+ * 
+ * @param ctx 上下文对象
+ * @param id 插件ID
+ * @return void* 接口对象
+ */
 void* interfaceObj(IContext* ctx, QString id);
 ```
 
@@ -174,6 +186,32 @@ if (0 == m_ctx->query(QUERY_TYPE::PLUGIN_MANAGER, (void**)&pluginManager)) {
 ```
 
 #### 窗体管理器
+
+> 控制框架窗体和插件窗体：注册窗体、最大化、最小化、全屏、显示、隐藏窗体等
+
+```cpp
+/**
+ * @brief 注册窗体对象
+ * 
+ * @param ctx 上下文对象
+ * @param id 注册窗体对象ID（插件ID）
+ * @param widget 窗体对象
+ * @return int 成功:0
+ */
+virtual int registerWidget(IContext *ctx, QString id, QWidget *widget) = 0;
+
+```
+
+**使用示例**
+
+```cpp
+// dbg
+// 在调试插件中注册窗体对象
+IWindowManager *winManager;
+if (0 == m_ctx->query(QUERY_TYPE::WINDOW_MANAGER, (void**)&winManager)) {
+    winManager->registerWidget(m_ctx, "dbg", new MainWidget(m_ctx));
+}
+```
 
 #### 消息管理器
 
@@ -216,8 +254,7 @@ if (0 == m_ctx->query(QUERY_TYPE::PLUGIN_MANAGER, (void**)&pluginManager)) {
 
 # 联系我们
 
-> 作者：Rick
-> 
-> 邮箱：rick@guaik.io
-> 
-> QQ：3558888808
+* 作者：Rick
+* 邮箱：rick@guaik.io
+* QQ：3558888808
+* QQ群：564354254
