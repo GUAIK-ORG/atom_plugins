@@ -91,6 +91,12 @@ https://github.com/GUAIK-ORG/atom_plugins/releases/tag/v1.0.0
 
 ## 🗂 插件开发教程
 
+### 快速开始
+
+#### 你好！Atom
+
+https://www.bilibili.com/video/BV1QN4y1V7Wx/
+
 开发内容主要分两类：
 
 * 服务组件
